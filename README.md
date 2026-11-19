@@ -1,7 +1,8 @@
 # Software FJ – Sistema Integral de Gestión de Clientes, Servicios y Reservas
 
 Proyecto en **Python 3.8+**, sin librerías externas ni bases de datos.
-Ejecución: `python main.py` (genera `logs/sistema.log`).
+Ejecución:
+`python gui.py` (interfaz gráfica con Tkinter; es el punto de entrada). Genera `logs/sistema.log`. En Linux, si falta Tkinter: `sudo apt install python3-tk`.
 
 ## Estructura
 | Archivo | Contenido |
@@ -12,7 +13,7 @@ Ejecución: `python main.py` (genera `logs/sistema.log`).
 | `servicios.py` | `Servicio` (abstracta), `ReservaSala`, `AlquilerEquipo`, `Asesoria` |
 | `reserva.py` | `Reserva` + `Estado`: confirmar, cancelar, procesar |
 | `gestor.py` | `SistemaGestion`: listas internas y ejecución a prueba de fallos |
-| `main.py` | Simulación de 14 operaciones válidas e inválidas |
+| `gui.py` | Punto de entrada. Interfaz gráfica con pestañas Clientes, Servicios, Reservas y Registro; el botón «Ejecutar simulación» corre operaciones válidas e inválidas |
 
 ## Conceptos aplicados
 - **Abstracción**: `EntidadBase` y `Servicio` (métodos `@abstractmethod`).
@@ -23,4 +24,4 @@ Ejecución: `python main.py` (genera `logs/sistema.log`).
   encadenamiento con `raise ... from err`; todo error se registra en el log y el programa continúa.
 
 ## Reparto sugerido (5 integrantes)
-1. Excepciones y logger · 2. Cliente y entidad base · 3. Servicios · 4. Reserva y estados · 5. Gestor, main y documentación.
+1. Excepciones y logger · 2. Cliente y entidad base · 3. Servicios · 4. Reserva y estados · 5. Gestor, interfaz gráfica y documentación.
