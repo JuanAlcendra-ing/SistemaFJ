@@ -178,3 +178,61 @@
 2026-11-18 20:42:50,996 | INFO     | Fin de operación: Crear servicio AlquilerEquipo
 2026-11-18 20:42:50,996 | INFO     | Crear servicio Asesoria -> OK
 2026-11-18 20:42:50,999 | INFO     | Fin de operación: Crear servicio Asesoria
+2026-11-19 17:02:54,121 | INFO     | ===== INICIO DE LA SIMULACIÓN POR CONSOLA =====
+2026-11-19 17:02:54,123 | INFO     | Registrar cliente -> OK
+2026-11-19 17:02:54,123 | INFO     | Fin de operación: Registrar cliente
+2026-11-19 17:02:54,123 | ERROR    | Registrar cliente -> ClienteInvalidoError: Email inválido: 'pedro#correo'
+2026-11-19 17:02:54,123 | INFO     | Fin de operación: Registrar cliente
+2026-11-19 17:02:54,125 | INFO     | Registrar cliente -> OK
+2026-11-19 17:02:54,125 | INFO     | Fin de operación: Registrar cliente
+2026-11-19 17:02:54,125 | ERROR    | Registrar cliente -> ClienteInvalidoError: Cliente duplicado (email o documento)
+2026-11-19 17:02:54,125 | INFO     | Fin de operación: Registrar cliente
+2026-11-19 17:02:54,125 | ERROR    | Registrar cliente -> ParametroFaltanteError: Falta el parámetro 'telefono' del cliente
+2026-11-19 17:02:54,127 | INFO     | Fin de operación: Registrar cliente
+2026-11-19 17:02:54,127 | INFO     | Crear servicio ReservaSala -> OK
+2026-11-19 17:02:54,127 | INFO     | Fin de operación: Crear servicio ReservaSala
+2026-11-19 17:02:54,127 | ERROR    | Crear servicio ReservaSala -> ServicioInvalidoError: Capacidad inválida: -5
+2026-11-19 17:02:54,127 | INFO     | Fin de operación: Crear servicio ReservaSala
+2026-11-19 17:02:54,129 | INFO     | Crear servicio AlquilerEquipo -> OK
+2026-11-19 17:02:54,129 | INFO     | Fin de operación: Crear servicio AlquilerEquipo
+2026-11-19 17:02:54,131 | INFO     | Crear servicio Asesoria -> OK
+2026-11-19 17:02:54,131 | INFO     | Fin de operación: Crear servicio Asesoria
+2026-11-19 17:02:54,133 | ERROR    | Crear servicio Asesoria -> ServicioInvalidoError: Nivel inválido 'gurú' use ['junior', 'senior', 'experto']
+2026-11-19 17:02:54,133 | INFO     | Fin de operación: Crear servicio Asesoria
+2026-11-19 17:02:54,133 | INFO     | Reserva #11 confirmada
+2026-11-19 17:02:54,133 | INFO     | Crear reserva -> OK
+2026-11-19 17:02:54,133 | INFO     | Fin de operación: Crear reserva
+2026-11-19 17:02:54,135 | ERROR    | Crear reserva -> ServicioInvalidoError: Duración fuera de rango (1-8 horas): 20
+2026-11-19 17:02:54,135 | INFO     | Fin de operación: Crear reserva
+2026-11-19 17:02:54,135 | ERROR    | Crear reserva -> ParametroFaltanteError: Cliente, servicio y duración son obligatorios
+2026-11-19 17:02:54,135 | INFO     | Fin de operación: Crear reserva
+2026-11-19 17:02:54,135 | INFO     | Reserva #11 procesada. Costo total: $267,750.00
+2026-11-19 17:02:54,135 | INFO     | Intento de procesamiento finalizado para reserva #11
+2026-11-19 17:02:54,137 | INFO     | Procesar reserva -> OK
+2026-11-19 17:02:54,137 | INFO     | Fin de operación: Procesar reserva
+2026-11-19 17:02:54,137 | ERROR    | Cancelar reserva -> OperacionNoPermitidaError: No se puede cancelar una reserva Procesada
+2026-11-19 17:02:54,137 | INFO     | Fin de operación: Cancelar reserva
+2026-11-19 17:02:54,137 | ERROR    | Crear reserva -> ServicioNoDisponibleError: 'Portátil Pro' no está disponible
+2026-11-19 17:02:54,137 | INFO     | Fin de operación: Crear reserva
+2026-11-19 17:02:54,139 | INFO     | Reserva #15 confirmada
+2026-11-19 17:02:54,139 | INFO     | Crear reserva -> OK
+2026-11-19 17:02:54,139 | INFO     | Fin de operación: Crear reserva
+2026-11-19 17:02:54,139 | INFO     | Intento de procesamiento finalizado para reserva #15
+2026-11-19 17:02:54,139 | ERROR    | Procesar reserva -> CalculoInconsistenteError: Descuento fuera de rango: 0.8
+2026-11-19 17:02:54,139 | INFO     | Fin de operación: Procesar reserva
+2026-11-19 17:02:54,139 | INFO     | Reserva #15 procesada. Costo total: $216,000.00
+2026-11-19 17:02:54,139 | INFO     | Intento de procesamiento finalizado para reserva #15
+2026-11-19 17:02:54,139 | INFO     | Procesar reserva -> OK
+2026-11-19 17:02:54,139 | INFO     | Fin de operación: Procesar reserva
+2026-11-19 17:02:54,139 | INFO     | Reserva #16 confirmada
+2026-11-19 17:02:54,139 | INFO     | Crear reserva -> OK
+2026-11-19 17:02:54,139 | INFO     | Fin de operación: Crear reserva
+2026-11-19 17:02:54,141 | INFO     | Reserva #16 cancelada
+2026-11-19 17:02:54,141 | INFO     | Cancelar reserva -> OK
+2026-11-19 17:02:54,141 | INFO     | Fin de operación: Cancelar reserva
+2026-11-19 17:02:54,141 | INFO     | Intento de procesamiento finalizado para reserva #16
+2026-11-19 17:02:54,141 | ERROR    | Procesar reserva -> OperacionNoPermitidaError: Solo se procesan reservas confirmadas (estado: Cancelada)
+2026-11-19 17:02:54,141 | INFO     | Fin de operación: Procesar reserva
+2026-11-19 17:02:54,143 | INFO     | ===== FIN DE LA SIMULACIÓN POR CONSOLA =====
+2026-11-19 17:03:13,095 | INFO     | ===== INICIO (modo gráfico) =====
+2026-11-19 17:03:13,612 | INFO     | Interfaz gráfica iniciada
